@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class IsAdmin
+{
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
+    public function handle(Request $request, Closure $next)
+    {
+        //jika admin akan diarahkan ke alaman admin
+        if(Auth::user() && Auth::user()->roles == 'ADMIN')
+        {
+            return $next($request);
+        }
+        //jika bukan admin tidak boleh akses (diarahkan kehalaman homepage)
+        return redirect('/');
+    }
+}
