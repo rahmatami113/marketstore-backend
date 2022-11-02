@@ -4,7 +4,7 @@
   <tr><td><strong>Web Backend-FoodMarket</strong></td></tr>
   <tr>
     <td><p align="center"><img src="/Gambar/Screenshot-Laravel05.png"></p></td>
-    <td><p align="center"><img src="/Gambar/Screenshot-Laravel02.png" width="400" height="400"></p></td>
+    <td><p align="center"><img src="/Gambar/Screenshot-Laravel02.png"></p></td>
   </tr>
 </table>
 
